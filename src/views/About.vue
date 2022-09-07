@@ -12,12 +12,12 @@
 
 	<header class="intro">
 		<h1 class="intro_hello">
-			Hello!
+			<strong>Hello</strong>
 		</h1>
 		<h2 class="intro_tagline">
 			I'm
 			<div class="myname">Zakariae Hayani Jamil</div>
-			 a design-minded <br><br><br>
+			 a design-minded <br><br><br><br><br>
 			<div class="mytext">
 				<div class="content">
 					<div class=" container">
@@ -26,10 +26,10 @@
 							<li class="item">Financial Engineer.</li>
 							<li class="item">Full Stack Developer.</li>
 						</ul>
-					</div><br><br><br><br><br>
+					</div>
 				</div>
 			</div>
-			<span>Worked on developing and designing products for the web, by using knowledge of finance and data science, creating simple landing pages to designing complete data-centric applications.</span>
+			<span>Worked on developing and designing products for the web, by using knowledge of finance and data science, creating simple landing pages to designing complete data-centric applications</span>
 			<span id="emojiwavehand" class="emoji technologist"></span>
   </h2>
 		<h3 class="intro_contact">
@@ -341,33 +341,6 @@ body ul, html ul {
     100% {transform: rotate(0deg);}
 }
 
-@-webkit-keyframes wave{
-    0% {transform: rotate(0deg);}
-    /*10%{transform: rotate(90deg);}*/
-    20% {transform: rotate(90deg);}  
-    /*30%{transform: rotate(90deg);}*/
-    40% {transform: rotate(15deg);}
-    /*50% {transform: rotate(90deg);}*/
-    60% {transform: rotate(90deg);}
-    /*70%{transform: rotate(90deg);}*/
-    80%{transform: rotate(15deg);}
-    /*90% {transform: rotate(90deg);}*/
-    100% {transform: rotate(0deg);}
-}
-
-@-webkit-keyframes pulsate {
-      0% {
-        transform: scale(0.1, 0.1);
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1.2, 1.2);
-        opacity: 0;
-      }
-    }
 
 @keyframes pulsate {
       0% {
@@ -383,16 +356,6 @@ body ul, html ul {
       }
     }
 
-@-webkit-keyframes fadeIn {
-  /* keyframes must have at least two intervals from/to or 0%/100% */
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
 
 @keyframes fadeIn {
   /* keyframes must have at least two intervals from/to or 0%/100% */
@@ -414,24 +377,12 @@ body ul, html ul {
   100% { transform: skewX(0deg); }  
 }
 
-@-webkit-keyframes shake {
-  0% { transform: skewX(-15deg); }
-  5% { transform: skewX(15deg); }
-  10% { transform: skewX(-15deg); }
-  15% { transform: skewX(15deg); }
-  20% { transform: skewX(0deg); }
-  100% { transform: skewX(0deg); }  
-}
 
 @keyframes opacity1 {
   0%, 100% {opacity:0;}
   50% {opacity:1;}
 }
 
-@-webkit-keyframes opacity1 {
-  0%, 100% {opacity:0;}
-  50% {opacity:1;}
-}
 
 @keyframes change {
   0%, 12.66%, 100% {transform:translate3d(0,0,0);}
@@ -441,16 +392,6 @@ body ul, html ul {
   66.64%,79.3% {transform:translate3d(0,-37%,0);}
   83.3%,95.96% {transform:translate3d(0,-0%,0);}
 }
-
-@-webkit-keyframes change {
-  0%, 12.66%, 100% {transform:translate3d(0,0,0);}
-  16.66%, 29.32% {transform:translate3d(0,-35%,0);}
-  33.32%,45.98% {transform:translate3d(0,-68%,0);}
-  49.98%,62.64% {transform:translate3d(0,-70%,0);}
-  66.64%,79.3% {transform:translate3d(0,-37%,0);}
-  83.3%,95.96% {transform:translate3d(0,-0%,0);}
-}
-
   
 /*All Media Queries*/
 
@@ -500,18 +441,6 @@ body ul, html ul {
         padding: 0px 30px 0px 30px;
     }
 
-    .experience .job .time-place {
-        display: block;
-    }
-
-    .experience .job_time {
-        font-size: .8rem;
-    }
-
-    .footer {
-        padding: 50px 30px;
-    }
-
     body #top-button, html #top-button {
         bottom: 15px;
         right: 3px;
@@ -523,14 +452,7 @@ body ul, html ul {
 }
 
 @media screen and (max-width: 550px){
-    .intro {
-        padding: 120px 50px;
-    }
 
-    .intro_hello, .intro_tagline {
-        font-size: 1.55rem;
-        margin-bottom: 0%;
-    }
 
      .content {
       top: 41.5%;
@@ -538,47 +460,7 @@ body ul, html ul {
       font-size: 1.5rem;
     }
 
-    .intro_contact {
-        font-size: 1rem;
-    }
-
-    .switch-wrapper a, body.night .switch-wrapper a {
-        margin: 2px;
-        font-size: 8px;
-    }
-
-     .intro #downbutton img {
-        height: 25px;
-        width: 25px;
-    }
-
-    .fixed-side-nav {
-         margin-top: 50%;
-    }
-
-    .skills{
-        margin-top: 100px;
-    }
 }
-
-@media screen and (max-width: 630px)
-{
-   
-    .skills .skillz {
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    }
-
-     .skills .skillz_category {
-        width: 47%;
-        margin-right: 5px;
-        margin-bottom: 25px;  
-    }
-
-    .background .section_content .status_message {
-        margin: auto;
-    }
-  }
 
 
 @media screen and (max-width: 768px){
@@ -610,16 +492,6 @@ body ul, html ul {
     }
 }
 
-@media screen and (max-width: 850px){
-   
-    .footer_links a .text {
-        display: none;
-    }
-    .footer_links img {
-        display: inline-block;
-    }
-}
-
 
 @media screen and (max-width: 1024px){
    
@@ -628,13 +500,6 @@ body ul, html ul {
     }
     body .section_title, html .section_title  {
         margin-right: 50px;
-    }
-
-    .featured-projects .project {
-        width: 105%;
-    }
-    .footer {
-        padding: 50px;
     }
     body #top-button, html #top-button {
         bottom: 20px;

@@ -1,8 +1,9 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Card from './components/Card.vue'
-import MyButton from './components/MyButton.vue'
+import HelloWorld from '../components/HelloWorld.vue'
+import Card from '../components/Card.vue'
+import MyButton from '../components/MyButton.vue'
 import {reactive} from 'vue'
+import axios from 'axios'
 
 export default {
   components: {
@@ -14,13 +15,18 @@ export default {
   methods: {
     create() {
       this.state.count = this.state.count ? "" : "none"
-      console.log('error')
+      console.log(state.entries)
       let popup = document.getElementById("page")
+    },
+    add() {
+//      axios,post,add
+      console.log(api)
     }
   },
   
-  setup(){
-    const state = reactive({count:"none",
+   setup(){
+    const api = "http://127.0.0.1:8000"
+    const state =  reactive({count:"none",
                            entries: [
                                {
                                  project:"Fitness",
@@ -41,44 +47,52 @@ export default {
          })
     
     return {
-      state
+      state,
     }
-  }
+  },
+  async mounted () {
+    
+    let res = await axios.get("http://localho.st:8000/todos/", {mode: 'no-cors'})
+    this.state.entries.push.apply(this.state.entries, res.data)
+    console.log(res.data)
+
+  },
 } 
 </script>
 
 <template>
   <hello-world @runCreation="create"/>
-  
+  <div class="spa"></div>
   <span id="page" 
-        :style="`display:${state.count} `"
-  >
+        :style="`display:${state.count} `">
     
     <form>
       <input value="Project"/>
       <input value="Task"/>
       <input value="Description"/>
+      <input @click="add" type="button" value="add"/>
     </form>
   
   </span>
-
-  <card v-for="job in state.entries">
-    <template v-slot:title>{{job.project}}</template>
-    <template v-slot:content>{{job.task}}</template>
-    <template v-slot:description>{{job.description}}</template>
-  </card>
+  <div class="conteneur">
+    <card v-for="job in state.entries">
+      <template v-slot:title>{{job.project?job.project:"General" }}</template>
+<!--      <template v-slot:content>{{job.task}}</template>-->
+      <template v-slot:description>{{job.description?job.description:job.title}} {{job.complete?"✅":""}}</template>
+    </card>
+  </div>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+  .conteneur {
+    display: grid;
+    align-items: center;
+  }
+  .card{
+    display: contents;
+  }
+  .spa{
+    height: 100px;
+  }
+  
 </style>
