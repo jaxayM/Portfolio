@@ -11,7 +11,7 @@ export default {
 
 <template>
 
-<div :class="appTheme" class="pt-0.5">
+<div :class="appTheme" class="over grid grid-row-2 pt-0.5">
 
     <div class="navibar container font-general-medium text-lg">
       <ul class="flex m-0 mt-5 p-5 justify-center items-center ">
@@ -61,9 +61,14 @@ export default {
 .fade-leave-active {
 	animation: going 0.4s;
 }
-  .all{
-    z-index: 1;
+  .over {
+    height: 200%;
   }
+.all{
+  height: 50%;
+  z-index: 1;
+/*  position: fixed;*/
+}
 .navibar {
     position: relative;
     z-index: 100;

@@ -1,6 +1,6 @@
 <template>
 
-<div id = "site">
+<div class="main" id = "site">
 	<div class="switch-wrapper"> 
 		<div class="sun"></div> 
 		<div class="toggle-wrapper">
@@ -12,12 +12,13 @@
 
 	<header class="intro">
 		<h2 class="intro_tagline font-general-semibold">
-			<div class="gone mx-auto flex">
-   <section class=" flex flex-col sm:justify-between items-center sm:flex-row mt-12 sm:mt-10 mb-5 sm:mb-8">
-   <div class="w-full md:w-2/3 text-left"><br><br><br>
+			<div class="">
+   <section class="sec">
+     <br><br><br><br><br>
+   <div class=" sm:text-left float-left w-full text-left">
     Hello I Am
 			<div class="myname">Zakariae Hayani</div>
-			 A Design-minded:<br><br>
+			 <div>A Design-minded:</div>
 			</div>
    </section>
    <div class="w-full text-right float-right mytext">
@@ -32,7 +33,6 @@
 				</div>
 			</div>
    </div>
-    <div class="conteneur"></div>
 			<span class="text-left float-left text-ternary-dark dark:text-primary-light">Worked on developing and designing products for the web, by using knowledge of finance and data science, creating simple landing pages to designing complete data-centric applications.</span>
   </h2>
 		<h3 class="intro_contact">
@@ -49,7 +49,7 @@
 
 <style scoped>
 
-body, html  {
+.main  {
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -90,29 +90,39 @@ h3 {
     font-weight: bold;
 }
  
-body a, html a {
+/*
+.main a {
     text-decoration: none;
     font-weight: 900;
     color: #36363c;
     transition: all .25s ease-in-out;
     font-family: Helvetica;
 } 
+*/
   
-body p, html p {
+main p {
     font-weight: 200;
 }
 
-body a:hover{
+/*
+.main a:hover{
     text-decoration: underline blue;
 }
+*/
   
 section.fadeIn{
     animation: fadeIn 2s forwards;
 }
   
-.gone {
-  display:grid;
+.intro {
+  
+    position: absolute;
+/*  margin-top: 100px;*/
+  top: 100px;
 }
+  .mytext{
+    height: 100px;
+  }
   
 .conteneur {
   padding-top: 100px;
@@ -201,12 +211,13 @@ section.fadeIn{
     font-weight: bold;
 }
 .myname {
+      color: aliceblue;
       text-transform: uppercase;
       letter-spacing: 2px;
       text-decoration: none;
       text-fill-color: transparent;
       display: inline-block;
-      /*background-image: linear-gradient(to right, #30CFD0 0%, #330867 100%);*/
+      background-image: linear-gradient(to right, #30CFD0 0%, #330867 100%);
       animation: .8s shake infinite alternate;
 }
   
@@ -214,13 +225,14 @@ section.fadeIn{
     font-weight: bolder;
 }
 .content {
-    position: absolute;
+    position: relative;
     top: 37%;
     overflow:hidden;
     font-size: 30px;
     line-height: 50px;
     color: #FFCB04;
 }
+  
   
 .content .container {
     font-weight: 600;
@@ -308,7 +320,7 @@ section.fadeIn{
 }
 
 .intro_contact .emoji.pointer {
-    background-image: url(images/right-pointing.png);
+/*    background-image: url(images/right-pointing.png);*/
     width: 30px;
     height: 30px;
     margin: 0 5px;
@@ -331,7 +343,7 @@ section.fadeIn{
 }
 
   
-body ul, html ul {
+.main ul {
     list-style: none;
     padding: 0;
 }
@@ -415,7 +427,8 @@ body ul, html ul {
     body .intro {
             padding: 130px 45px; 
         }
-}
+
+  }
 
 
 @media screen and (max-width: 425px){
