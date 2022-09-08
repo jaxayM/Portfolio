@@ -1,13 +1,19 @@
 <script>
-
+import AppBanner from '../components/AppBanner.vue'
 export default {
-  
+  components: {
+    AppBanner
+  }
 } 
 </script>
 
 <template>
 
-    <h1>Hello</h1>
+<div class="container mx-auto">
+
+  <AppBanner class="mb-5 sm:mb-8"/>
+  
+</div>
 
 </template>
 

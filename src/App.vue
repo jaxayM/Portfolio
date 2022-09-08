@@ -4,40 +4,92 @@ import Home from './views/Home.vue'
 
 export default {
   components: {
-    About, Home
+    About, Home, 
   }
 } 
 </script>
 
 <template>
-  <h1 style="position: absolute;">
-    <div class="navbar">
-      <ul>
-        <li>
-          <router-link to="/">Home; </router-link>
+
+<div :class="appTheme" class="pt-0.5">
+
+    <div class="navibar sm:container sm:mx-auto font-general-medium text-lg">
+      <ul class="hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
+        <li class="mr-6">
+          <router-link class="text-blue-500 hover:text-blue-800 router-link" to="/">Home </router-link>
         </li>
-        <li>
-          <router-link to="/about">About;</router-link>
+        <li class="mr-6">
+          <router-link class="text-blue-500 hover:text-blue-800 router-link" to="/about">About </router-link>
         </li>
-        <li>
-          <router-link to="/app">App</router-link>
+        <li class="mr-6">
+          <router-link class="text-gray-400 cursor-not-allowed" to="/app">App</router-link>
         </li>
       </ul>
     </div>
-  </h1>
-<RouterView/>
+    
+      <RouterView class="all" :theme="appTheme"/>
+  
+	</div>
 </template>
 
 <style>
-  * {
-/*    color: darkviolet;*/
-  }
-.navbar {
-    white-space: nowrap;
-}
-.navbar li {
-  display: inline-block;
+
+  #app {
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
 }
 
+.vue-back-to-top {
+	@apply p-2 bg-indigo-500 hover:bg-indigo-600 text-white transition
+        duration-500
+        ease-in-out
+        transform
+        hover:-translate-y-1 hover:scale-110;
+	border-radius: 50%;
+	font-size: 22px;
+	line-height: 22px;
+}
+
+.fade-enter-active {
+	animation: coming 0.4s;
+	animation-delay: 0.2s;
+	opacity: 0;
+}
+
+.fade-leave-active {
+	animation: going 0.4s;
+}
+  .all{
+    z-index: 1;
+  }
+.navibar {
+    position: relative;
+    z-index: 100;
+}
+  
+@keyframes going {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-10px);
+		opacity: 0;
+	}
+}
+
+@keyframes coming {
+	from {
+		transform: translateX(-10px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
 
 </style>

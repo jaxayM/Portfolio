@@ -11,16 +11,18 @@
 	</div>
 
 	<header class="intro">
-		<h1 class="intro_hello">
-			<strong>Hello</strong>
-		</h1>
-		<h2 class="intro_tagline">
-			I'm
-			<div class="myname">Zakariae Hayani Jamil</div>
-			 a design-minded <br><br><br><br><br>
-			<div class="mytext">
+		<h2 class="intro_tagline font-general-semibold">
+			<div class="gone mx-auto flex">
+   <section class=" flex flex-col sm:justify-between items-center sm:flex-row mt-12 sm:mt-10 mb-5 sm:mb-8">
+   <div class="w-full md:w-2/3 text-left"><br><br><br>
+    Hello I Am
+			<div class="myname">Zakariae Hayani</div>
+			 A Design-minded:<br><br>
+			</div>
+   </section>
+   <div class="w-full text-right float-right mytext">
 				<div class="content">
-					<div class=" container">
+					<div class="container">
 						<ul class="list">
 							<li class="item">Data Analyst.</li>
 							<li class="item">Financial Engineer.</li>
@@ -29,14 +31,15 @@
 					</div>
 				</div>
 			</div>
-			<span>Worked on developing and designing products for the web, by using knowledge of finance and data science, creating simple landing pages to designing complete data-centric applications</span>
-			<span id="emojiwavehand" class="emoji technologist"></span>
+   </div>
+    <div class="conteneur"></div>
+			<span class="text-left float-left text-ternary-dark dark:text-primary-light">Worked on developing and designing products for the web, by using knowledge of finance and data science, creating simple landing pages to designing complete data-centric applications.</span>
   </h2>
 		<h3 class="intro_contact">
 			<span>Take a look at my latest project </span>
 			<span class="emoji pointer"></span>
 			<span id="emailme">
-				<a href="" class="highlight-link">VueJs Memo App</a>
+				<router-link to="/app" class="highlight-link cursor-not-allowed">VueJs Memo App</router-link>
 			</span>
 		</h3>
 	</header>
@@ -44,7 +47,7 @@
 
 </template>
 
-<style>
+<style scoped>
 
 body, html  {
   margin: 0;
@@ -105,6 +108,14 @@ body a:hover{
   
 section.fadeIn{
     animation: fadeIn 2s forwards;
+}
+  
+.gone {
+  display:grid;
+}
+  
+.conteneur {
+  padding-top: 100px;
 }
   
 .switch-wrapper{
@@ -214,7 +225,7 @@ section.fadeIn{
 .content .container {
     font-weight: 600;
     overflow: hidden;
-    height: 50px;
+    height: 55px;
     padding: 0px 40px;
     width: 100%;
 }
@@ -223,7 +234,7 @@ section.fadeIn{
       left: 0;
     }
 
-.container:after {
+.container:after {   
       content: ']';
       position: absolute;
       right: 0;

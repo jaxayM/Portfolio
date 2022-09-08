@@ -66,18 +66,18 @@ export default {
   <span id="page" 
         :style="`display:${state.count} `">
     
-    <form>
-      <input value="Project"/>
-      <input value="Task"/>
-      <input value="Description"/>
-      <input @click="add" type="button" value="add"/>
+    <form class="container flex">
+      <input class="mr-2 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Project"/>
+      <input class="mr-2 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Task"/>
+      <input class="mr-2 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Description"/>
+      <input class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="add" type="button" value="Add"/>
     </form>
   
   </span>
-  <div class="conteneur">
+  <div class="container conteneur">
     <card v-for="job in state.entries">
       <template v-slot:title>{{job.project?job.project:"General" }}</template>
-<!--      <template v-slot:content>{{job.task}}</template>-->
+      <template v-slot:content>{{job.task}}</template>
       <template v-slot:description>{{job.description?job.description:job.title}} {{job.complete?"✅":""}}</template>
     </card>
   </div>
@@ -85,11 +85,12 @@ export default {
 
 <style scoped>
   .conteneur {
-    display: grid;
-    align-items: center;
+    display: flex;
+    align-items: flex-end;
   }
   .card{
-    display: contents;
+    margin: 5px;
+    width: 200px; 
   }
   .spa{
     height: 100px;
