@@ -13,8 +13,8 @@ export default {
 
 <div :class="appTheme" class="pt-0.5">
 
-    <div class="navibar sm:container sm:mx-auto font-general-medium text-lg">
-      <ul class="hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
+    <div class="navibar container font-general-medium text-lg">
+      <ul class="flex m-0 mt-5 p-5 justify-center items-center ">
         <li class="mr-6">
           <router-link class="text-blue-500 hover:text-blue-800 router-link" to="/">Home </router-link>
         </li>
