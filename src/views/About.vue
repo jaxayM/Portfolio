@@ -21,7 +21,7 @@
 			 <div>A Design-minded:</div>
 			</div>
    </section>
-   <div class="w-full text-right float-right mytext">
+   <div class="w-max text-right float-left mytext">
 				<div class="content">
 					<div class="container">
 						<ul class="list">
@@ -89,38 +89,21 @@ h3 {
     -webkit-margin-end: 0px;
     font-weight: bold;
 }
- 
-/*
-.main a {
-    text-decoration: none;
-    font-weight: 900;
-    color: #36363c;
-    transition: all .25s ease-in-out;
-    font-family: Helvetica;
-} 
-*/
-  
+
 main p {
     font-weight: 200;
 }
 
-/*
-.main a:hover{
-    text-decoration: underline blue;
-}
-*/
-  
 section.fadeIn{
     animation: fadeIn 2s forwards;
 }
   
 .intro {
-  
     position: absolute;
 /*  margin-top: 100px;*/
-  top: 100px;
+    top: 100px;
 }
-  .mytext{
+.mytext{
     height: 100px;
   }
   
@@ -429,6 +412,7 @@ section.fadeIn{
         }
 
   }
+  
 
 
 @media screen and (max-width: 425px){
