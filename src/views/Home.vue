@@ -15,6 +15,8 @@ export default {
   
 </div>
 
+<span style="float: left;"><br><br>Icons by icons8.com</span>
+
 </template>
 
 <style scoped>

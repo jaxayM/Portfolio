@@ -28,12 +28,11 @@
 			<span class="text-left float-left text-ternary-dark dark:text-primary-light">Worked on developing and designing products for the web, by using knowledge of finance and data science, creating simple landing pages to designing complete data-centric applications.</span>
   </h2>
 		<h3 class="intro_contact">
-			<span><br><br>Take a look at my latest project </span>
+			<span>Take a look at my latest project </span>
 			<span class="emoji pointer"></span>
 			<span id="emailme">
 				<router-link to="/app" class="highlight-link cursor-not-allowed">VueJs Memo App</router-link>
 			</span>
-            <span style="float: left;"><br><br>Icons by icons8.com</span>
 		</h3>
 	</header>
 </div>

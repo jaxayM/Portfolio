@@ -150,10 +150,13 @@
     list-style: none;
     
   }
-  .nav ul li{
+  .nav ul li:first-child{
     margin-left: 50px;
   }
   
+  .nav ul li:nth-child(2){
+    margin-left: 10px;
+  }
   .cart{
     cursor: pointer;
     display: flex;
