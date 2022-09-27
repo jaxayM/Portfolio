@@ -22,7 +22,7 @@
     <ul>
       <li v-for="prod in purchased">
         <button class="delete" @click="remove(prod)">x</button>
-        Product: {{prod.product}}, price: {{prod.price}}
+        {{prod.product}}, price: {{prod.price}}
       
     </li>
   </ul>
