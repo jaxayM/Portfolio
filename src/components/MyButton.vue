@@ -1,22 +1,12 @@
 <template>
-    <button :style="{ background, color}"> Button
+    <button> {{text? text : "Button"}}
   </button>
 </template>
 
 
 <script>
 export default {
-    props: {
-        color: {
-            type: String
-        },
-        background: {
-            type: String
-        },
-        disabled: {
-            type: Boolean
-        }
-    }   
+    props: ['text']   
 }
 </script>
 
@@ -26,13 +16,16 @@ export default {
     color: black;
     border: none;
     border-radius: 5px;
-    padding: 10px 40px;
+    padding: 5px 10px;
+    margin: 5px 10px;
     font-size: 16px;
     cursor: pointer;
   }
   button:hover{
-    
-    filter: brightness(125%);
+    background-color: aliceblue;
+  }
+  button:active{
+    background-color: gainsboro;
   }
 </style>
  

@@ -1,14 +1,6 @@
 <template>
 
 <div class="main" id = "site">
-	<div class="switch-wrapper"> 
-		<div class="sun"></div> 
-		<div class="toggle-wrapper">
-			<input type="checkbox" id="switch"/>
-			<label for="switch" id="switch1" >Toggle</label> 
-		</div>
-		<div class="moon"></div>
-	</div>
 
 	<header class="intro">
 		<h2 class="intro_tagline font-general-semibold">
@@ -36,11 +28,12 @@
 			<span class="text-left float-left text-ternary-dark dark:text-primary-light">Worked on developing and designing products for the web, by using knowledge of finance and data science, creating simple landing pages to designing complete data-centric applications.</span>
   </h2>
 		<h3 class="intro_contact">
-			<span>Take a look at my latest project </span>
+			<span><br><br>Take a look at my latest project </span>
 			<span class="emoji pointer"></span>
 			<span id="emailme">
 				<router-link to="/app" class="highlight-link cursor-not-allowed">VueJs Memo App</router-link>
 			</span>
+            <span style="float: left;"><br><br>Icons by icons8.com</span>
 		</h3>
 	</header>
 </div>
