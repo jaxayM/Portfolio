@@ -5,11 +5,13 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Product from './views/Product.vue'
 import Ecommerce from './views/Ecommerce.vue' 
+import Projects from './views/Projects.vue'
 
 const routes = [
   { path: "/", component: Home },
-  { path: "/about", component: About },
   { path: "/app", component: Product },
+  { path: "/projects", component: Projects },
+  { path: "/about", component: About },
   { path: "/ecom", component: Ecommerce },
 ]
 

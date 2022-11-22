@@ -22,7 +22,7 @@ export default {
           <router-link class="text-blue-500 hover:text-blue-800 router-link" to="/about">About </router-link>
         </li>
         <li class="mr-6">
-          <router-link class="text-gray-400" to="/ecom">App</router-link>
+          <router-link class="text-gray-400" to="/projects">Projects</router-link>
         </li>
       </ul>
     </div>
