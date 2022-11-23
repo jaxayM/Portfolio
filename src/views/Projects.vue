@@ -32,7 +32,7 @@ export default {
             },{
                 title: 'Blog',
                 image: 'icons8.gif',
-                code: 'https://jaxaym.github.io/blog-ab',
+                code: 'https://jaxaym.github.io/Blog-AB',
                 inhost: false,
             },
         ]
