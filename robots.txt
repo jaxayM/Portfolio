@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /Blog-AB/feed
+Disallow: /Blog-AB/register
+Disallow: /Blog-AB/login
+Disallow: /Blog-AB/new-blog
+Disallow: /Blog-AB/view-post
+Disallow: /Blog-AB/edit-blog
